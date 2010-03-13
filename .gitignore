@@ -3,3 +3,5 @@ release/*
 lib/*
 Makefile*
 project6.pro.user
+*.o
+
