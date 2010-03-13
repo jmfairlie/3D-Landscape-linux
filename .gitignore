@@ -3,3 +3,4 @@ release/*
 lib/*
 Makefile*
 project6.pro.user
+object_script.*
