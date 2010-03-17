@@ -7,7 +7,7 @@ CONFIG += console
 TEMPLATE = app
 win32:DEFINES += _STDCALL_SUPPORTED \
     _M_IX86 \
-#    BOOST_ALL_NO_LIB \
+    BOOST_ALL_NO_LIB \
     PCRE_STATIC \
     DOM_INCLUDE_LIBXML
 win32:SOURCES += ./src/QBthread.cpp \
@@ -132,7 +132,13 @@ win32:LIBS += -L"./lib/SDL" \
     -lgdi32 \
     ./lib/libqextserialportd.a \
     -mwindows
-!win32:LIBS += -L". /lib/collada/linux64/libcollada14dom.a \
+!win32:LIBS += -L"." ./lib/collada/linux64/libcollada14dom.a \
     -lboost_system-mt \
     -lboost_filesystem-mt \
-    ./lib/collada/linux64/libinizip.a
+    -lxml2 \
+    ./lib/collada/linux64/libminizip.a \
+    -lpcrecpp \
+    -lpcre
+
+DESTDIR=./bin
+OBJECTS_DIR=./obj
