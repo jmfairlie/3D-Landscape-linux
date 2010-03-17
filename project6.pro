@@ -5,23 +5,23 @@ QT += opengl
 TARGET = project6
 CONFIG += console
 TEMPLATE = app
-DEFINES += _STDCALL_SUPPORTED \
+win32:DEFINES += _STDCALL_SUPPORTED \
     _M_IX86 \
-    BOOST_ALL_NO_LIB \
+#    BOOST_ALL_NO_LIB \
     PCRE_STATIC \
     DOM_INCLUDE_LIBXML
+win32:SOURCES += ./src/QBthread.cpp \
+    ./src/QBtooth.cpp \
+    src/ffmpegreader.cpp \
+    src/ffvideothread.cpp
 SOURCES += ./src/main.cpp \
     ./src/Utils3D.cpp \
     ./src/Object3D.cpp \
     ./src/Engine3D.cpp \
     ./src/ColladaReader.cpp \
-    ./src/QBthread.cpp \
-    ./src/QBtooth.cpp \
     src/Widget3D.cpp \
-    src/ffmpegreader.cpp \
     src/MenuItem.cpp \
     src/MenuManager.cpp \
-    src/ffvideothread.cpp \
     src/imagewidget.cpp \
     src/routegraph.cpp \
     src/routeedge.cpp \
@@ -54,26 +54,26 @@ SOURCES += ./src/main.cpp \
     src/ResultManager.cpp \
     src/Popup.cpp \
     src/IconButton.cpp
+win32:INCLUDEPATH += "./inc/boost-inc" \
+    "./inc/SDL"
 INCLUDEPATH += "./inc" \
     "./inc/collada-inc" \
-    "./inc/collada-inc/1.4" \
-    "./inc/boost-inc" \
-    "./inc/SDL"
-HEADERS += ./inc/TextureLoader.h \
-    ./inc/SceneManager.h \
+    "./inc/collada-inc/1.4"
+win32:HEADERS += ./inc/TextureLoader.h \
+    ./inc/QBthread.h \
+    ./inc/QBtooth.h \
+    inc/ffmpegreader.h \
+    inc/ffvideothread.h
+HEADERS += ./inc/SceneManager.h \
     ./inc/Object3D.h \
     ./inc/errors.h \
     ./inc/Engine3D.h \
     ./inc/definesall.h \
     ./inc/ColladaReader.h \
     ./inc/Utils3D.h \
-    ./inc/QBthread.h \
-    ./inc/QBtooth.h \
     inc/Widget3D.h \
-    inc/ffmpegreader.h \
     inc/MenuItem.h \
     inc/MenuManager.h \
-    inc/ffvideothread.h \
     inc/imagewidget.h \
     inc/routegraph.h \
     inc/routeedge.h \
@@ -105,8 +105,9 @@ HEADERS += ./inc/TextureLoader.h \
     inc/ResultItem.h \
     inc/ResultManager.h \
     inc/Popup.h \
-    inc/IconButton.h
-LIBS += -L"./lib/SDL" \
+    inc/IconButton.h \
+    inc/DummyDefinitions.h
+win32:LIBS += -L"./lib/SDL" \
     ./lib/collada/libcollada14dom.a \
     ./lib/collada/libboost_system.a \
     ./lib/collada/libboost_filesystem.a \
@@ -131,3 +132,7 @@ LIBS += -L"./lib/SDL" \
     -lgdi32 \
     ./lib/libqextserialportd.a \
     -mwindows
+!win32:LIBS += -L". /lib/collada/linux64/libcollada14dom.a \
+    -lboost_system-mt \
+    -lboost_filesystem-mt \
+    ./lib/collada/linux64/libinizip.a

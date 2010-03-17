@@ -3,15 +3,22 @@
 
 #include <Utils3D.h>
 #include <ColladaReader.h>
+
+#ifdef __WIN32__
 #include <TextureLoader.h>
+#else
+#include <DummyDefinitions.h>
+#endif
+
 #include <iostream>
+#include <map>
 using namespace std;
 
 class Object3D
 {
    public:
-      Object3D::Object3D();
-                        Object3D(glTexture* ptexstr, TNode* nodeInfo, map<string,TGeometry> *pgeometries);   // Constructor.
+      Object3D();
+      Object3D(glTexture* ptexstr, TNode* nodeInfo, map<string,TGeometry> *pgeometries);   // Constructor.
       ~Object3D();  // Destructor.
 
         void render();

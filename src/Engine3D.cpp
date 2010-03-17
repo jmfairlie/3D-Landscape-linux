@@ -1,5 +1,8 @@
 #include <Engine3D.h>
 
+#ifndef __WIN32__
+#include <sys/time.h>
+#endif
 
 Engine3D::Engine3D(QWidget *parent, char *name)
 {
@@ -39,20 +42,23 @@ Engine3D::Engine3D(QWidget *parent, char *name)
 
     MouseActive = false;
 
+#ifdef __WIN32__
     textureLoader = new TextureLoader;
-
+#endif
 
     this->colladaLoader = NULL;
     this->colladaAuxObjects = NULL;
 
     this->isMakeScreenShot = false;
 
+#ifdef __WIN32__
     //register AccData structure for Slots/Signals mechanism
-    qRegisterMetaType<AccData>("AccData");    
+    qRegisterMetaType<AccData>("AccData");
 
     //initialize Shake SK7 pointers
     this->bt = new QBtooth(13);
     this->bThr = new QBthread(this->bt);
+#endif
 
     this->routeGraph = new RouteGraph;
 
@@ -62,17 +68,24 @@ Engine3D::Engine3D(QWidget *parent, char *name)
 
     this->applicationState = E_3DVIEW;
 
+#ifdef __WIN32__
     //connect Engine3D to QBtooth
     QObject::connect(this->bt, SIGNAL(dataReceived(AccData)), this, SLOT(printAccData(AccData)));
     QObject::connect(this->bt, SIGNAL(disconnected(bool)), this, SLOT(isDisconnected(bool)));
 
-    this->selectedVideoWidget = -1;
-    this->selectedWidget = -1;
-    this->isVideoPlaying = false;
 
+    this->selectedVideoWidget = -1;
+#endif
+
+    this->selectedWidget = -1;
+
+#ifdef __WIN32_
+    this->isVideoPlaying = false;
+    _
     //start thread
     #warning "UNCOMMENT this->bThr->start() to use shaker SK7"
     this->bThr->start();
+#endif
 
     //widgets for Widgets3D
     this->iw = NULL;
@@ -154,7 +167,19 @@ void Engine3D::initializeGL()
             m_timer = new QTimer( this );
             connect( m_timer, SIGNAL(timeout()), this, SLOT(timeOutSlot()) );
             m_timer->start(20);
-            this->startTime =  GetTickCount();
+
+            INT64 lGetTickCount;
+
+#ifdef __WIN32__
+            lGetTickCount = GetTickCount();
+#else
+            //get the current number of microseconds since january 1st 1970
+            struct timeval ts;
+            gettimeofday(&ts,0);
+            lGetTickCount = (INT64)(ts.tv_sec * 1000 + (ts.tv_usec / 1000));
+#endif
+
+            this->startTime =  lGetTickCount;//GetTickCount();
 
             this->texture_timer = new QTimer(this);
             connect( texture_timer, SIGNAL(timeout()), this, SLOT(textureTimerSlot()) );
@@ -238,7 +263,17 @@ void Engine3D::paintEvent(QPaintEvent *event)
 
     this->frames++;
 
-    this->fps = (float)this->frames/(GetTickCount() - startTime)*1000;
+    INT64 lGetTickCount;
+#ifdef __WIN32__
+    lGetTickCount = GetTickCount();
+#else
+    //get the current number of microseconds since january 1st 1970
+    struct timeval ts;
+    gettimeofday(&ts,0);
+    lGetTickCount = (INT64)(ts.tv_sec * 1000 + (ts.tv_usec / 1000));
+#endif
+
+    this->fps = (float)this->frames/(/*GetTickCount()*/lGetTickCount - startTime)*1000;
 }
 
 void Engine3D::DrawView3D()
@@ -764,18 +799,23 @@ void Engine3D::destroySceneObjects()
 
     this->auxObjects.clear();
 
+#ifdef __WIN32__
     for(int i=0; i < this->numTextures; i++)
     {
             textureLoader->FreeTexture(&textures[i]);
     }
+#endif
+
     delete[] textures;
     this->numTextures = 0;
 
-
+#ifdef __WIN32__
     for(int i=0; i < this->numAuxTextures; i++)
     {
             textureLoader->FreeTexture(&auxTextures[i]);
     }
+#endif
+
     delete[] auxTextures;
     this->numAuxTextures = 0;
     //destroy readers
@@ -793,7 +833,7 @@ void Engine3D::destroyWidgets3D()
         delete this->widgets3D[i];
     }    
 
-
+#ifdef __WIN32__
     for(int i = 0; i < this->videoWidgets3D.size(); i++)
     {
         if(this->videoWidgets3D[i]->isVideoStarted)
@@ -803,9 +843,13 @@ void Engine3D::destroyWidgets3D()
 
         delete this->videoWidgets3D[i];
     }
+#endif
 
     this->widgets3D.clear();
+
+#ifdef __WIN32__
     this->videoWidgets3D.clear();
+#endif
 
     if(this->iw)
     {
@@ -1244,11 +1288,14 @@ void Engine3D::timeOutSlot()
 
 void Engine3D::textureTimerSlot()
 {
+#ifdef __WIN32__
     //update textures of all running videos
     if(this->isVideoPlaying)
         this->updateVideoWidgetTexture();
+
     //update textures of all non-video widgets
     if(!this->isVideoPlaying)
+#endif
         this->updateWidgetTexture();
 }
 
@@ -1258,7 +1305,7 @@ void Engine3D::zoomSideBar(float z)
 }
 Engine3D::~Engine3D()
 {
-
+#ifdef __WIN32__
     //delete Shake SK7 connectivity pointers
     QObject::disconnect(this->bt, SIGNAL(dataReceived(AccData)), this, SLOT(printAccData(AccData)));
     QObject::disconnect(this->bt, SIGNAL(disconnected(bool)), this, SLOT(isDisconnected(bool)));
@@ -1267,7 +1314,7 @@ Engine3D::~Engine3D()
 
     delete this->bThr;
     delete this->bt;
-
+#endif
 	for(int i=0; i< numObjects; i++)
 	{
 		delete objects[i];
@@ -1275,14 +1322,18 @@ Engine3D::~Engine3D()
 	delete[] objects;
 	delete[] lights;
 	
+#ifdef __WIN32__
         for(int i=0; i < this->numTextures; i++)
 	{
 		textureLoader->FreeTexture(&textures[i]);
 	}
+#endif
 	delete[] textures;
-	delete textureLoader;
+#ifdef __WIN32__
+        delete textureLoader;
+#endif
 	delete colladaLoader;
-    delete colladaAuxObjects;
+        delete colladaAuxObjects;
 	
 	//delete destinations
         for(int i = 0; i < this->destinations.size(); i++)
@@ -1424,6 +1475,7 @@ bool Engine3D::loadTextures()
 	textures = new glTexture[numTextures];
         //GL_REPLACE
 
+#ifdef __WIN32__
         this->textureLoader->SetTextureFilter(txTrilinear);
 
 	for(int i=0; i< numTextures; i++)
@@ -1436,10 +1488,12 @@ bool Engine3D::loadTextures()
                     return false;
             }
         }
-
+#endif
 
         this->numAuxTextures = this->colladaAuxObjects->textureFileNames.size();
         this->auxTextures = new glTexture[numAuxTextures];
+
+#ifdef __WIN32__
         //load auxTextures
         for(int i = 0; i < this->numAuxTextures; i++)
         {
@@ -1459,6 +1513,7 @@ bool Engine3D::loadTextures()
                     cout<<"loading error: sky texture"<<endl;
                     return false;
             }
+#endif
 
 	return true;
 }
@@ -2296,6 +2351,7 @@ int Engine3D::destinationsSearch()
     return this->foundDestinations.size();
 }
 
+#ifdef __WIN32__
 //SK7 slots implementation
 void Engine3D::printAccData(AccData accData)
 {
@@ -2339,7 +2395,9 @@ void Engine3D::printAccData(AccData accData)
         }
     }
 }
+#endif
 
+#ifdef __WIN32__
 void Engine3D::isDisconnected(bool disconnected)
 {
     static int counter = 0;
@@ -2359,6 +2417,7 @@ void Engine3D::isDisconnected(bool disconnected)
         this->bThr->start();
     }
 }
+#endif
 
 void Engine3D::createWidgets3D()
 {
@@ -2420,10 +2479,12 @@ void Engine3D::createWidgets3D()
      GLuint texID;
 
      bool test = false;
+#ifdef __WIN32__
      if(test = this->getVerticesAndImageIndex(nodeID, tl, bl, tr, br, texID))
          //this->widgets3D.append(new Widget3D(tl, bl, tr, br, texID, groupBox));
          this->videoWidgets3D.append(new Widget3D(tl, bl, tr, br, texID, NULL, true));
          //this->widgets3D.append(new Widget3D(tl, bl, tr, br, texID, iw2, false));
+#endif
 
      QString nodeID2("galleryPlane_001");
 
@@ -2647,11 +2708,15 @@ bool Engine3D::ProcessMouseEvent(QMouseEvent * e)
 
          bool isIntersecting = widget3D->intersects(nearr, farr);
 
-         if(isIntersecting && !widget3D->isVideoWidget)
+         if(isIntersecting
+#ifdef __WIN32__
+            && !widget3D->isVideoWidget
+#endif
+          )
          {
             //set selected widget and stop video
             this->selectedWidget = i;
-
+#ifdef __WIN32__
             cout << "SELECTED VIDEO WIDGET: " << this->selectedVideoWidget << endl;
             if(this->selectedVideoWidget != -1)
             {
@@ -2660,7 +2725,7 @@ bool Engine3D::ProcessMouseEvent(QMouseEvent * e)
             }
             this->selectedVideoWidget = -1;
             this->isVideoPlaying = false;
-
+#endif
             Point3D interPoint = widget3D->getLocalCoord();
 
             //cout << "Texture name: " << this->colladaLoader->textureFileNames[widget3D->imageIndex] << endl;
@@ -2737,6 +2802,7 @@ bool Engine3D::ProcessMouseEvent(QMouseEvent * e)
 
       if(e->type() == QEvent::MouseButtonPress)
       {
+#ifdef __WIN32__
           for(int i = 0; i < this->videoWidgets3D.size(); i++)
           {
              Point3D nearr(this->nearPosX, this->nearPosY, this->nearPosZ);
@@ -2767,6 +2833,7 @@ bool Engine3D::ProcessMouseEvent(QMouseEvent * e)
                  return true;
              }
           }
+#endif
       }
       this->selectedWidget = -1;
 
@@ -2978,7 +3045,7 @@ void Engine3D::processHits (GLint hits, GLuint buffer[])
            if(this->inInsideView && this->objects[*ptr]->nodeStr->id == "door")
            {
                this->applicationState = E_FADE_IN;
-
+#ifdef __WIN32__
                //close all videos if any
                for(int k = 0; k < this->videoWidgets3D.size(); k++)
                {
@@ -2986,6 +3053,7 @@ void Engine3D::processHits (GLint hits, GLuint buffer[])
                         this->videoWidgets3D[k]->stopVideo();
                }
                this->isVideoPlaying = false;
+#endif
            }
            //show price list for drinks
            else if(this->inInsideView && this->objects[*ptr]->nodeStr->id == "bottlesPlane")
@@ -3298,6 +3366,7 @@ void Engine3D::updateRay(int x, int y)
              );
 }
 
+#ifdef __WIN32__
 void Engine3D::updateVideoWidgetTexture()
 {
     //update textures of all video widgets if the video is running
@@ -3339,13 +3408,17 @@ void Engine3D::updateVideoWidgetTexture()
         }
     }
 }
+#endif
 
 void Engine3D::updateWidgetTexture()
 {
     for(int i = 0; i < this->widgets3D.size(); i++)
     {
+#ifdef __WIN32__
         if(!this->widgets3D[i]->isVideoWidget)
+#endif
         {
+
             QPixmap widgetPM(this->widgets3D[i]->widget->size());
             this->widgets3D[i]->widget->render(&widgetPM);
             QImage widgText = widgetPM.toImage();
