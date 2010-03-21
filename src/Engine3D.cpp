@@ -114,7 +114,12 @@ void Engine3D::drawSky()
 {
     this->skyangle+=0.1;
     glEnable(GL_TEXTURE_2D);
+
+#ifdef __WIN32__
     glBindTexture(GL_TEXTURE_2D, this->skytexture.TextureID);
+#else
+    glBindTexture(GL_TEXTURE_2D, this->skytexture.getTextureName());
+#endif
 
     glPushMatrix();
 
@@ -141,6 +146,8 @@ void Engine3D::initializeGL()
 
     glShadeModel(GL_SMOOTH);
     glEnable(GL_DEPTH_TEST);
+    glDepthFunc(GL_LESS);
+    glClearDepth(1.0f);
     glEnable(GL_CULL_FACE);
     glCullFace(GL_BACK); //default but just in case
     //glPolygonMode(GL_BACK, GL_LINE); //in case we wanted to draw something for the back faces
@@ -190,6 +197,10 @@ void Engine3D::initializeGL()
             cout<<"error loading scene"<<endl;
     }
 
+    /*QGLFormat frmt = this->format();
+    cout << "DB size: " << frmt.depthBufferSize() << endl;
+    frmt.setDepthBufferSize(32);
+    this->setFormat(frmt);*/
 }
 
 void Engine3D::reset3DProjectionMatrix()
@@ -279,6 +290,7 @@ void Engine3D::paintEvent(QPaintEvent *event)
 void Engine3D::DrawView3D()
 {
     glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
     DrawMainView();
     DrawSideBar();
     //DrawTopBar();
@@ -804,9 +816,14 @@ void Engine3D::destroySceneObjects()
     {
             textureLoader->FreeTexture(&textures[i]);
     }
+#else
+    for(int i=0; i < this->numTextures; i++)
+    {
+        deleteTexture(this->textures[i].getTextureName());
+    }
+    delete[] this->textures;
 #endif
 
-    delete[] textures;
     this->numTextures = 0;
 
 #ifdef __WIN32__
@@ -815,9 +832,15 @@ void Engine3D::destroySceneObjects()
             textureLoader->FreeTexture(&auxTextures[i]);
     }
 #endif
-
+    for(int i=0; i < this->numTextures; i++)
+    {
+        deleteTexture(this->auxTextures[i].getTextureName());
+    }
     delete[] auxTextures;
     this->numAuxTextures = 0;
+
+    deleteTexture(this->skytexture.getTextureName());
+
     //destroy readers
     if(this->colladaLoader)
         delete this->colladaLoader;
@@ -1472,10 +1495,11 @@ void Engine3D::rotateRelativeCamera( GLfloat pitch, GLfloat yaw, GLfloat roll)
 bool Engine3D::loadTextures()
 {
         numTextures = colladaLoader->textureFileNames.size();
-	textures = new glTexture[numTextures];
+
         //GL_REPLACE
 
 #ifdef __WIN32__
+        textures = new glTexture[numTextures];
         this->textureLoader->SetTextureFilter(txTrilinear);
 
 	for(int i=0; i< numTextures; i++)
@@ -1488,12 +1512,38 @@ bool Engine3D::loadTextures()
                     return false;
             }
         }
+#else
+        textures = new LTexture[numTextures];
+
+        for(int i=0; i < numTextures; i++)
+        {
+            //load image
+            textures[i].createTextureImage(QString(colladaLoader->textureFileNames[i].c_str()));
+
+            if(textures[i].getTextureImage()->isNull())
+            {
+                //some error loading textures
+                cout << "loading error: " << colladaLoader->textureFileNames[i]<<endl;
+                return false;
+            }
+
+            //set texture
+            textures[i].setTextureName(bindTexture(*(textures[i].getTextureImage()), GL_TEXTURE_2D));
+
+            if(!textures[i].getTextureName())
+            {
+                cout << "binding of texture failed" << colladaLoader->textureFileNames[i]<<endl;
+                return false;
+            }
+
+        }
 #endif
 
         this->numAuxTextures = this->colladaAuxObjects->textureFileNames.size();
-        this->auxTextures = new glTexture[numAuxTextures];
+
 
 #ifdef __WIN32__
+        this->auxTextures = new glTexture[numAuxTextures];
         //load auxTextures
         for(int i = 0; i < this->numAuxTextures; i++)
         {
@@ -1513,6 +1563,51 @@ bool Engine3D::loadTextures()
                     cout<<"loading error: sky texture"<<endl;
                     return false;
             }
+#else
+        auxTextures = new LTexture[numAuxTextures];
+
+        for(int i = 0; i < numAuxTextures; i++)
+        {
+            //load image
+            auxTextures[i].createTextureImage(QString(colladaAuxObjects->textureFileNames[i].c_str()));
+
+            if(auxTextures[i].getTextureImage()->isNull())
+            {
+                //some error loading textures
+                cout << "loading error: " << colladaAuxObjects->textureFileNames[i]<<endl;
+                return false;
+            }
+
+            //set texture
+            auxTextures[i].setTextureName(bindTexture(*(auxTextures[i].getTextureImage()), GL_TEXTURE_2D));
+
+            if(!auxTextures[i].getTextureName())
+            {
+                cout << "binding of texture failed" << colladaAuxObjects->textureFileNames[i]<<endl;
+                return false;
+            }
+
+        }
+
+        this->skytexture.createTextureImage("../res/textures/sky.jpg");
+
+        if (this->skytexture.getTextureImage()->isNull())
+        {
+            //some error loading textures
+            cout << "loading error: sky texture" << endl;
+            return false;
+        }
+
+
+        //set texture
+        this->skytexture.setTextureName(bindTexture(*(this->skytexture.getTextureImage()), GL_TEXTURE_2D));
+
+        if(!this->skytexture.getTextureName())
+        {
+            cout << "binding of texture failed: sky texture" << endl;
+            return false;
+        }
+
 #endif
 
 	return true;
@@ -3425,6 +3520,7 @@ void Engine3D::updateWidgetTexture()
 
             QImage imm = QGLWidget::convertToGLFormat(widgText);
 
+#ifdef __WIN32__
             glTexture *textureStruct = &this->textures[this->widgets3D[i]->imageIndex];
 
             //cout << "Texture ID before: " << textureStruct->TextureID << endl;
@@ -3447,6 +3543,32 @@ void Engine3D::updateWidgetTexture()
 
             glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, imm.width(), imm.height(),
                 0, GL_RGBA, GL_UNSIGNED_BYTE, imm.bits());
+#else
+            LTexture *textureStruct = &this->textures[this->widgets3D[i]->imageIndex];
+
+            //cout << "Texture ID before: " << textureStruct->TextureID << endl;
+            //cout << "Texture ID before: " << this->textures[this->widgets3D[this->selectedWidget]->imageIndex].TextureID << endl;
+
+            GLuint tID = textureStruct->getTextureName();
+            glDeleteTextures(1, &tID);
+
+            glGenTextures(1, &tID);
+
+            //cout << "Texture ID after: " << textureStruct->TextureID << endl;
+
+            glBindTexture(GL_TEXTURE_2D, textureStruct->getTextureName());
+
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+
+            glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR);
+            glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR);
+
+
+            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, imm.width(), imm.height(),
+                0, GL_RGBA, GL_UNSIGNED_BYTE, imm.bits());
+#endif
+
         }
     }
 

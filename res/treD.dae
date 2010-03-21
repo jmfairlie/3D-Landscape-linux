@@ -9521,595 +9521,595 @@
 	</library_effects>
 	<library_images>
 		<image id="fre_l_p_jpg-img" name="fre_l_p_jpg-img">
-			<init_from>..\res\textures\fre_l_p.jpg</init_from>
+			<init_from>../res/textures/fre_l_p.jpg</init_from>
 		</image>
 		<image id="fre_t_jpg-img" name="fre_t_jpg-img">
-			<init_from>..\res\textures\fre_t.jpg</init_from>
+			<init_from>../res/textures/fre_t.jpg</init_from>
 		</image>
 		<image id="fre_p_jpg-img" name="fre_p_jpg-img">
-			<init_from>..\res\textures\fre_p.jpg</init_from>
+			<init_from>../res/textures/fre_p.jpg</init_from>
 		</image>
 		<image id="fre_k3_jpg-img" name="fre_k3_jpg-img">
-			<init_from>..\res\textures\fre_k3.jpg</init_from>
+			<init_from>../res/textures/fre_k3.jpg</init_from>
 		</image>
 		<image id="fre_k2_jpg-img" name="fre_k2_jpg-img">
-			<init_from>..\res\textures\fre_k2.jpg</init_from>
+			<init_from>../res/textures/fre_k2.jpg</init_from>
 		</image>
 		<image id="fre_k_jpg-img" name="fre_k_jpg-img">
-			<init_from>..\res\textures\fre_k.jpg</init_from>
+			<init_from>../res/textures/fre_k.jpg</init_from>
 		</image>
 		<image id="fre_pty_jpg-img" name="fre_pty_jpg-img">
-			<init_from>..\res\textures\fre_pty.jpg</init_from>
+			<init_from>../res/textures/fre_pty.jpg</init_from>
 		</image>
 		<image id="maa2706_jpg-img" name="maa2706_jpg-img">
-			<init_from>..\res\textures\maa2706.jpg</init_from>
+			<init_from>../res/textures/maa2706.jpg</init_from>
 		</image>
 		<image id="fre_e1_2_jpg-img" name="fre_e1_2_jpg-img">
-			<init_from>..\res\textures\fre_e1_2.jpg</init_from>
+			<init_from>../res/textures/fre_e1_2.jpg</init_from>
 		</image>
 		<image id="fre_i_e_jpg-img" name="fre_i_e_jpg-img">
-			<init_from>..\res\textures\fre_i_e.jpg</init_from>
+			<init_from>../res/textures/fre_i_e.jpg</init_from>
 		</image>
 		<image id="fre_e1_jpg-img" name="fre_e1_jpg-img">
-			<init_from>..\res\textures\fre_e1.jpg</init_from>
+			<init_from>../res/textures/fre_e1.jpg</init_from>
 		</image>
 		<image id="fre_s_i_jpg-img" name="fre_s_i_jpg-img">
-			<init_from>..\res\textures\fre_s_i.jpg</init_from>
+			<init_from>../res/textures/fre_s_i.jpg</init_from>
 		</image>
 		<image id="kko_2_jpg-img" name="kko_2_jpg-img">
-			<init_from>..\res\textures\kko_2.jpg</init_from>
+			<init_from>../res/textures/kko_2.jpg</init_from>
 		</image>
 		<image id="kko_6_jpg-img" name="kko_6_jpg-img">
-			<init_from>..\res\textures\kko_6.jpg</init_from>
+			<init_from>../res/textures/kko_6.jpg</init_from>
 		</image>
 		<image id="kko_3_jpg-img" name="kko_3_jpg-img">
-			<init_from>..\res\textures\kko_3.jpg</init_from>
+			<init_from>../res/textures/kko_3.jpg</init_from>
 		</image>
 		<image id="kko_6_jpg-img" name="kko_6_jpg-img">
-			<init_from>..\res\textures\kko_6.jpg</init_from>
+			<init_from>../res/textures/kko_6.jpg</init_from>
 		</image>
 		<image id="kko_5_jpg-img" name="kko_5_jpg-img">
-			<init_from>..\res\textures\kko_5.jpg</init_from>
+			<init_from>../res/textures/kko_5.jpg</init_from>
 		</image>
 		<image id="kko_1_jpg-img" name="kko_1_jpg-img">
-			<init_from>..\res\textures\kko_1.jpg</init_from>
+			<init_from>../res/textures/kko_1.jpg</init_from>
 		</image>
 		<image id="kko_2_jpg-img" name="kko_2_jpg-img">
-			<init_from>..\res\textures\kko_2.jpg</init_from>
+			<init_from>../res/textures/kko_2.jpg</init_from>
 		</image>
 		<image id="kko_6_jpg-img" name="kko_6_jpg-img">
-			<init_from>..\res\textures\kko_6.jpg</init_from>
+			<init_from>../res/textures/kko_6.jpg</init_from>
 		</image>
 		<image id="kko_3_jpg-img" name="kko_3_jpg-img">
-			<init_from>..\res\textures\kko_3.jpg</init_from>
+			<init_from>../res/textures/kko_3.jpg</init_from>
 		</image>
 		<image id="kko_6_jpg-img" name="kko_6_jpg-img">
-			<init_from>..\res\textures\kko_6.jpg</init_from>
+			<init_from>../res/textures/kko_6.jpg</init_from>
 		</image>
 		<image id="kko_4_jpg-img" name="kko_4_jpg-img">
-			<init_from>..\res\textures\kko_4.jpg</init_from>
+			<init_from>../res/textures/kko_4.jpg</init_from>
 		</image>
 		<image id="kko_3_jpg-img" name="kko_3_jpg-img">
-			<init_from>..\res\textures\kko_3.jpg</init_from>
+			<init_from>../res/textures/kko_3.jpg</init_from>
 		</image>
 		<image id="k_torni_jpg-img" name="k_torni_jpg-img">
-			<init_from>..\res\textures\k_torni.jpg</init_from>
+			<init_from>../res/textures/k_torni.jpg</init_from>
 		</image>
 		<image id="vanhap_jpg-img" name="vanhap_jpg-img">
-			<init_from>..\res\textures\vanhap.jpg</init_from>
+			<init_from>../res/textures/vanhap.jpg</init_from>
 		</image>
 		<image id="vanhaj_jpg-img" name="vanhaj_jpg-img">
-			<init_from>..\res\textures\vanhaj.jpg</init_from>
+			<init_from>../res/textures/vanhaj.jpg</init_from>
 		</image>
 		<image id="vanhap1_jpg-img" name="vanhap1_jpg-img">
-			<init_from>..\res\textures\vanhap1.jpg</init_from>
+			<init_from>../res/textures/vanhap1.jpg</init_from>
 		</image>
 		<image id="asemy_jpg-img" name="asemy_jpg-img">
-			<init_from>..\res\textures\asemy.jpg</init_from>
+			<init_from>../res/textures/asemy.jpg</init_from>
 		</image>
 		<image id="asemy_jpg-img" name="asemy_jpg-img">
-			<init_from>..\res\textures\asemy.jpg</init_from>
+			<init_from>../res/textures/asemy.jpg</init_from>
 		</image>
 		<image id="asem3_jpg-img" name="asem3_jpg-img">
-			<init_from>..\res\textures\asem3.jpg</init_from>
+			<init_from>../res/textures/asem3.jpg</init_from>
 		</image>
 		<image id="asem1_jpg-img" name="asem1_jpg-img">
-			<init_from>..\res\textures\asem1.jpg</init_from>
+			<init_from>../res/textures/asem1.jpg</init_from>
 		</image>
 		<image id="asem2_jpg-img" name="asem2_jpg-img">
-			<init_from>..\res\textures\asem2.jpg</init_from>
+			<init_from>../res/textures/asem2.jpg</init_from>
 		</image>
 		<image id="pika_jpg-img" name="pika_jpg-img">
-			<init_from>..\res\textures\pika.jpg</init_from>
+			<init_from>../res/textures/pika.jpg</init_from>
 		</image>
 		<image id="silta_jpg-img" name="silta_jpg-img">
-			<init_from>..\res\textures\silta.jpg</init_from>
+			<init_from>../res/textures/silta.jpg</init_from>
 		</image>
 		<image id="rosso5_jpg-img" name="rosso5_jpg-img">
-			<init_from>..\res\textures\rosso5.jpg</init_from>
+			<init_from>../res/textures/rosso5.jpg</init_from>
 		</image>
 		<image id="pysty_jpg-img" name="pysty_jpg-img">
-			<init_from>..\res\textures\pysty.jpg</init_from>
+			<init_from>../res/textures/pysty.jpg</init_from>
 		</image>
 		<image id="rosso4_jpg-img" name="rosso4_jpg-img">
-			<init_from>..\res\textures\rosso4.jpg</init_from>
+			<init_from>../res/textures/rosso4.jpg</init_from>
 		</image>
 		<image id="rosso1_jpg-img" name="rosso1_jpg-img">
-			<init_from>..\res\textures\rosso1.jpg</init_from>
+			<init_from>../res/textures/rosso1.jpg</init_from>
 		</image>
 		<image id="rosso2_jpg-img" name="rosso2_jpg-img">
-			<init_from>..\res\textures\rosso2.jpg</init_from>
+			<init_from>../res/textures/rosso2.jpg</init_from>
 		</image>
 		<image id="rosso3_jpg-img" name="rosso3_jpg-img">
-			<init_from>..\res\textures\rosso3.jpg</init_from>
+			<init_from>../res/textures/rosso3.jpg</init_from>
 		</image>
 		<image id="stocca_jpg-img" name="stocca_jpg-img">
-			<init_from>..\res\textures\stocca.jpg</init_from>
+			<init_from>../res/textures/stocca.jpg</init_from>
 		</image>
 		<image id="ngj2_2_jpg-img" name="ngj2_2_jpg-img">
-			<init_from>..\res\textures\ngj2_2.jpg</init_from>
+			<init_from>../res/textures/ngj2_2.jpg</init_from>
 		</image>
 		<image id="stoccaj_jpg-img" name="stoccaj_jpg-img">
-			<init_from>..\res\textures\stoccaj.jpg</init_from>
+			<init_from>../res/textures/stoccaj.jpg</init_from>
 		</image>
 		<image id="ng3_2_jpg_001-img" name="ng3_2_jpg_001-img">
-			<init_from>..\res\textures\ng3_2.jpg</init_from>
+			<init_from>../res/textures/ng3_2.jpg</init_from>
 		</image>
 		<image id="ng_pala_jpg-img" name="ng_pala_jpg-img">
-			<init_from>..\res\textures\ng_pala.jpg</init_from>
+			<init_from>../res/textures/ng_pala.jpg</init_from>
 		</image>
 		<image id="scan2_2_jpg-img" name="scan2_2_jpg-img">
-			<init_from>..\res\textures\scan2_2.jpg</init_from>
+			<init_from>../res/textures/scan2_2.jpg</init_from>
 		</image>
 		<image id="scandic1_jpg-img" name="scandic1_jpg-img">
-			<init_from>..\res\textures\scandic1.jpg</init_from>
+			<init_from>../res/textures/scandic1.jpg</init_from>
 		</image>
 		<image id="scandic_jpg_001-img" name="scandic_jpg_001-img">
-			<init_from>..\res\textures\scandic.jpg</init_from>
+			<init_from>../res/textures/scandic.jpg</init_from>
 		</image>
 		<image id="palmuj_jpg-img" name="palmuj_jpg-img">
-			<init_from>..\res\textures\palmuj.jpg</init_from>
+			<init_from>../res/textures/palmuj.jpg</init_from>
 		</image>
 		<image id="palmu_jpg-img" name="palmu_jpg-img">
-			<init_from>..\res\textures\palmu.jpg</init_from>
+			<init_from>../res/textures/palmu.jpg</init_from>
 		</image>
 		<image id="leivoj_jpg-img" name="leivoj_jpg-img">
-			<init_from>..\res\textures\leivoj.jpg</init_from>
+			<init_from>../res/textures/leivoj.jpg</init_from>
 		</image>
 		<image id="leivo2_jpg-img" name="leivo2_jpg-img">
-			<init_from>..\res\textures\leivo2.jpg</init_from>
+			<init_from>../res/textures/leivo2.jpg</init_from>
 		</image>
 		<image id="ahola_2_jpg-img" name="ahola_2_jpg-img">
-			<init_from>..\res\textures\ahola_2.jpg</init_from>
+			<init_from>../res/textures/ahola_2.jpg</init_from>
 		</image>
 		<image id="poh_l_2_jpg-img" name="poh_l_2_jpg-img">
-			<init_from>..\res\textures\poh_l_2.jpg</init_from>
+			<init_from>../res/textures/poh_l_2.jpg</init_from>
 		</image>
 		<image id="poh-jul2_jpg-img" name="poh-jul2_jpg-img">
-			<init_from>..\res\textures\poh-jul2.jpg</init_from>
+			<init_from>../res/textures/poh-jul2.jpg</init_from>
 		</image>
 		<image id="sokkis_sk_jpg-img" name="sokkis_sk_jpg-img">
-			<init_from>..\res\textures\sokkis_sk.jpg</init_from>
+			<init_from>../res/textures/sokkis_sk.jpg</init_from>
 		</image>
 		<image id="sok_hk_1_jpg-img" name="sok_hk_1_jpg-img">
-			<init_from>..\res\textures\sok_hk_1.jpg</init_from>
+			<init_from>../res/textures/sok_hk_1.jpg</init_from>
 		</image>
 		<image id="koiso_jpg-img" name="koiso_jpg-img">
-			<init_from>..\res\textures\koiso.jpg</init_from>
+			<init_from>../res/textures/koiso.jpg</init_from>
 		</image>
 		<image id="mcd_jpg-img" name="mcd_jpg-img">
-			<init_from>..\res\textures\mcd.jpg</init_from>
+			<init_from>../res/textures/mcd.jpg</init_from>
 		</image>
 		<image id="mcd2_jpg-img" name="mcd2_jpg-img">
-			<init_from>..\res\textures\mcd2.jpg</init_from>
+			<init_from>../res/textures/mcd2.jpg</init_from>
 		</image>
 		<image id="kauppahalli_1_jpg-img" name="kauppahalli_1_jpg-img">
-			<init_from>..\res\textures\kauppahalli_1.jpg</init_from>
+			<init_from>../res/textures/kauppahalli_1.jpg</init_from>
 		</image>
 		<image id="mcdt_jpg-img" name="mcdt_jpg-img">
-			<init_from>..\res\textures\mcdt.jpg</init_from>
+			<init_from>../res/textures/mcdt.jpg</init_from>
 		</image>
 		<image id="memphis_sk_jpg-img" name="memphis_sk_jpg-img">
-			<init_from>..\res\textures\memphis_sk.jpg</init_from>
+			<init_from>../res/textures/memphis_sk.jpg</init_from>
 		</image>
 		<image id="sinooperi_jpg-img" name="sinooperi_jpg-img">
-			<init_from>..\res\textures\sinooperi.jpg</init_from>
+			<init_from>../res/textures/sinooperi.jpg</init_from>
 		</image>
 		<image id="merita_hk_jpg-img" name="merita_hk_jpg-img">
-			<init_from>..\res\textures\merita_hk.jpg</init_from>
+			<init_from>../res/textures/merita_hk.jpg</init_from>
 		</image>
 		<image id="merita_sk_jpg-img" name="merita_sk_jpg-img">
-			<init_from>..\res\textures\merita_sk.jpg</init_from>
+			<init_from>../res/textures/merita_sk.jpg</init_from>
 		</image>
 		<image id="memphis_hk_jpg-img" name="memphis_hk_jpg-img">
-			<init_from>..\res\textures\memphis_hk.jpg</init_from>
+			<init_from>../res/textures/memphis_hk.jpg</init_from>
 		</image>
 		<image id="kirjakauppa_sk_jpg-img" name="kirjakauppa_sk_jpg-img">
-			<init_from>..\res\textures\kirjakauppa_sk.jpg</init_from>
+			<init_from>../res/textures/kirjakauppa_sk.jpg</init_from>
 		</image>
 		<image id="tiimari_kulma_jpg-img" name="tiimari_kulma_jpg-img">
-			<init_from>..\res\textures\tiimari_kulma.jpg</init_from>
+			<init_from>../res/textures/tiimari_kulma.jpg</init_from>
 		</image>
 		<image id="tiimari_sk_jpg-img" name="tiimari_sk_jpg-img">
-			<init_from>..\res\textures\tiimari_sk.jpg</init_from>
+			<init_from>../res/textures/tiimari_sk.jpg</init_from>
 		</image>
 		<image id="tiimari_hk_jpg-img" name="tiimari_hk_jpg-img">
-			<init_from>..\res\textures\tiimari_hk.jpg</init_from>
+			<init_from>../res/textures/tiimari_hk.jpg</init_from>
 		</image>
 		<image id="halla_jpg-img" name="halla_jpg-img">
-			<init_from>..\res\textures\halla.jpg</init_from>
+			<init_from>../res/textures/halla.jpg</init_from>
 		</image>
 		<image id="kirjakauppa_hk_jpg-img" name="kirjakauppa_hk_jpg-img">
-			<init_from>..\res\textures\kirjakauppa_hk.jpg</init_from>
+			<init_from>../res/textures/kirjakauppa_hk.jpg</init_from>
 		</image>
 		<image id="expert_hk_jpg-img" name="expert_hk_jpg-img">
-			<init_from>..\res\textures\expert_hk.jpg</init_from>
+			<init_from>../res/textures/expert_hk.jpg</init_from>
 		</image>
 		<image id="tuulensuu_puisto_jpg-img" name="tuulensuu_puisto_jpg-img">
-			<init_from>..\res\textures\tuulensuu_puisto.jpg</init_from>
+			<init_from>../res/textures/tuulensuu_puisto.jpg</init_from>
 		</image>
 		<image id="tuulensuu_hk_jpg-img" name="tuulensuu_hk_jpg-img">
-			<init_from>..\res\textures\tuulensuu_hk.jpg</init_from>
+			<init_from>../res/textures/tuulensuu_hk.jpg</init_from>
 		</image>
 		<image id="expert_hk_jpg-img" name="expert_hk_jpg-img">
-			<init_from>..\res\textures\expert_hk.jpg</init_from>
+			<init_from>../res/textures/expert_hk.jpg</init_from>
 		</image>
 		<image id="expert_sk_jpg-img" name="expert_sk_jpg-img">
-			<init_from>..\res\textures\expert_sk.jpg</init_from>
+			<init_from>../res/textures/expert_sk.jpg</init_from>
 		</image>
 		<image id="paatytalo_hp_jpg-img" name="paatytalo_hp_jpg-img">
-			<init_from>..\res\textures\paatytalo_hp.jpg</init_from>
+			<init_from>../res/textures/paatytalo_hp.jpg</init_from>
 		</image>
 		<image id="paatytalo_hk_oikea_jp-img" name="paatytalo_hk_oikea_jp-img">
-			<init_from>..\res\textures\paatytalo_hk_oikea.jpg</init_from>
+			<init_from>../res/textures/paatytalo_hk_oikea.jpg</init_from>
 		</image>
 		<image id="paatytalo_hk_vasen_jp-img" name="paatytalo_hk_vasen_jp-img">
-			<init_from>..\res\textures\paatytalo_hk_vasen.jpg</init_from>
+			<init_from>../res/textures/paatytalo_hk_vasen.jpg</init_from>
 		</image>
 		<image id="hilden_sk_jpg-img" name="hilden_sk_jpg-img">
-			<init_from>..\res\textures\hilden_sk.jpg</init_from>
+			<init_from>../res/textures/hilden_sk.jpg</init_from>
 		</image>
 		<image id="hilden_hk_jpg-img" name="hilden_hk_jpg-img">
-			<init_from>..\res\textures\hilden_hk.jpg</init_from>
+			<init_from>../res/textures/hilden_hk.jpg</init_from>
 		</image>
 		<image id="palander_oikea_jpg-img" name="palander_oikea_jpg-img">
-			<init_from>..\res\textures\palander_oikea.jpg</init_from>
+			<init_from>../res/textures/palander_oikea.jpg</init_from>
 		</image>
 		<image id="palander_julkisivu_jp-img" name="palander_julkisivu_jp-img">
-			<init_from>..\res\textures\palander_julkisivu.jpg</init_from>
+			<init_from>../res/textures/palander_julkisivu.jpg</init_from>
 		</image>
 		<image id="palander_vasen_jpg-img" name="palander_vasen_jpg-img">
-			<init_from>..\res\textures\palander_vasen.jpg</init_from>
+			<init_from>../res/textures/palander_vasen.jpg</init_from>
 		</image>
 		<image id="sputnik2_jpg-img" name="sputnik2_jpg-img">
-			<init_from>..\res\textures\sputnik2.jpg</init_from>
+			<init_from>../res/textures/sputnik2.jpg</init_from>
 		</image>
 		<image id="sputnik_jpg-img" name="sputnik_jpg-img">
-			<init_from>..\res\textures\sputnik.jpg</init_from>
+			<init_from>../res/textures/sputnik.jpg</init_from>
 		</image>
 		<image id="torni_jpg-img" name="torni_jpg-img">
-			<init_from>..\res\textures\torni.jpg</init_from>
+			<init_from>../res/textures/torni.jpg</init_from>
 		</image>
 		<image id="h_ita1_jpg-img" name="h_ita1_jpg-img">
-			<init_from>..\res\textures\h_ita1.jpg</init_from>
+			<init_from>../res/textures/h_ita1.jpg</init_from>
 		</image>
 		<image id="h_hut_jpg-img" name="h_hut_jpg-img">
-			<init_from>..\res\textures\h_hut.jpg</init_from>
+			<init_from>../res/textures/h_hut.jpg</init_from>
 		</image>
 		<image id="h_ita3_jpg-img" name="h_ita3_jpg-img">
-			<init_from>..\res\textures\h_ita3.jpg</init_from>
+			<init_from>../res/textures/h_ita3.jpg</init_from>
 		</image>
 		<image id="h_ita2_jpg-img" name="h_ita2_jpg-img">
-			<init_from>..\res\textures\h_ita2.jpg</init_from>
+			<init_from>../res/textures/h_ita2.jpg</init_from>
 		</image>
 		<image id="h_p_jpg-img" name="h_p_jpg-img">
-			<init_from>..\res\textures\h_p.jpg</init_from>
+			<init_from>../res/textures/h_p.jpg</init_from>
 		</image>
 		<image id="torni2_jpg-img" name="torni2_jpg-img">
-			<init_from>..\res\textures\torni2.jpg</init_from>
+			<init_from>../res/textures/torni2.jpg</init_from>
 		</image>
 		<image id="h_l_jpg-img" name="h_l_jpg-img">
-			<init_from>..\res\textures\h_l.jpg</init_from>
+			<init_from>../res/textures/h_l.jpg</init_from>
 		</image>
 		<image id="tilli_y_jpg-img" name="tilli_y_jpg-img">
-			<init_from>..\res\textures\tilli_y.jpg</init_from>
+			<init_from>../res/textures/tilli_y.jpg</init_from>
 		</image>
 		<image id="teatj_jpg-img" name="teatj_jpg-img">
-			<init_from>..\res\textures\teatj.jpg</init_from>
+			<init_from>../res/textures/teatj.jpg</init_from>
 		</image>
 		<image id="tilli_jpg-img" name="tilli_jpg-img">
-			<init_from>..\res\textures\tilli.jpg</init_from>
+			<init_from>../res/textures/tilli.jpg</init_from>
 		</image>
 		<image id="takao_jpg-img" name="takao_jpg-img">
-			<init_from>..\res\textures\takao.jpg</init_from>
+			<init_from>../res/textures/takao.jpg</init_from>
 		</image>
 		<image id="lastausl_jpg-img" name="lastausl_jpg-img">
-			<init_from>..\res\textures\lastausl.jpg</init_from>
+			<init_from>../res/textures/lastausl.jpg</init_from>
 		</image>
 		<image id="anssi_jpg-img" name="anssi_jpg-img">
-			<init_from>..\res\textures\anssi.jpg</init_from>
+			<init_from>../res/textures/anssi.jpg</init_from>
 		</image>
 		<image id="takaiso_jpg-img" name="takaiso_jpg-img">
-			<init_from>..\res\textures\takaiso.jpg</init_from>
+			<init_from>../res/textures/takaiso.jpg</init_from>
 		</image>
 		<image id="tilli_y_jpg-img" name="tilli_y_jpg-img">
-			<init_from>..\res\textures\tilli_y.jpg</init_from>
+			<init_from>../res/textures/tilli_y.jpg</init_from>
 		</image>
 		<image id="tolpa_o_jpg-img" name="tolpa_o_jpg-img">
-			<init_from>..\res\textures\tolpa_o.jpg</init_from>
+			<init_from>../res/textures/tolpa_o.jpg</init_from>
 		</image>
 		<image id="anssi_jpg-img" name="anssi_jpg-img">
-			<init_from>..\res\textures\anssi.jpg</init_from>
+			<init_from>../res/textures/anssi.jpg</init_from>
 		</image>
 		<image id="juice_jpg-img" name="juice_jpg-img">
-			<init_from>..\res\textures\juice.jpg</init_from>
+			<init_from>../res/textures/juice.jpg</init_from>
 		</image>
 		<image id="tk_ala_jpg-img" name="tk_ala_jpg-img">
-			<init_from>..\res\textures\tk_ala.jpg</init_from>
+			<init_from>../res/textures/tk_ala.jpg</init_from>
 		</image>
 		<image id="t_teras_jpg-img" name="t_teras_jpg-img">
-			<init_from>..\res\textures\t_teras.jpg</init_from>
+			<init_from>../res/textures/t_teras.jpg</init_from>
 		</image>
 		<image id="tk_yla_jpg-img" name="tk_yla_jpg-img">
-			<init_from>..\res\textures\tk_yla.jpg</init_from>
+			<init_from>../res/textures/tk_yla.jpg</init_from>
 		</image>
 		<image id="tolpa_v_jpg-img" name="tolpa_v_jpg-img">
-			<init_from>..\res\textures\tolpa_v.jpg</init_from>
+			<init_from>../res/textures/tolpa_v.jpg</init_from>
 		</image>
 		<image id="taka_y_jpg-img" name="taka_y_jpg-img">
-			<init_from>..\res\textures\taka_y.jpg</init_from>
+			<init_from>../res/textures/taka_y.jpg</init_from>
 		</image>
 		<image id="lastaus_jpg-img" name="lastaus_jpg-img">
-			<init_from>..\res\textures\lastaus.jpg</init_from>
+			<init_from>../res/textures/lastaus.jpg</init_from>
 		</image>
 		<image id="casablanca_hk_jpg-img" name="casablanca_hk_jpg-img">
-			<init_from>..\res\textures\casablanca_hk.jpg</init_from>
+			<init_from>../res/textures/casablanca_hk.jpg</init_from>
 		</image>
 		<image id="raatijp_jpg-img" name="raatijp_jpg-img">
-			<init_from>..\res\textures\raatijp.jpg</init_from>
+			<init_from>../res/textures/raatijp.jpg</init_from>
 		</image>
 		<image id="yo_apteekki_jpg-img" name="yo_apteekki_jpg-img">
-			<init_from>..\res\textures\yo_apteekki.jpg</init_from>
+			<init_from>../res/textures/yo_apteekki.jpg</init_from>
 		</image>
 		<image id="raatij2_jpg-img" name="raatij2_jpg-img">
-			<init_from>..\res\textures\raatij2.jpg</init_from>
+			<init_from>../res/textures/raatij2.jpg</init_from>
 		</image>
 		<image id="raatije_jpg-img" name="raatije_jpg-img">
-			<init_from>..\res\textures\raatije.jpg</init_from>
+			<init_from>../res/textures/raatije.jpg</init_from>
 		</image>
 		<image id="raatij1_jpg-img" name="raatij1_jpg-img">
-			<init_from>..\res\textures\raatij1.jpg</init_from>
+			<init_from>../res/textures/raatij1.jpg</init_from>
 		</image>
 		<image id="raatij3_jpg-img" name="raatij3_jpg-img">
-			<init_from>..\res\textures\raatij3.jpg</init_from>
+			<init_from>../res/textures/raatij3.jpg</init_from>
 		</image>
 		<image id="veromoda_hk_jpg-img" name="veromoda_hk_jpg-img">
-			<init_from>..\res\textures\veromoda_hk.jpg</init_from>
+			<init_from>../res/textures/veromoda_hk.jpg</init_from>
 		</image>
 		<image id="veromoda_sivu_jpg-img" name="veromoda_sivu_jpg-img">
-			<init_from>..\res\textures\veromoda_sivu.jpg</init_from>
+			<init_from>../res/textures/veromoda_sivu.jpg</init_from>
 		</image>
 		<image id="h_m_sivukatuoikea_jpg-img" name="h_m_sivukatuoikea_jpg-img">
-			<init_from>..\res\textures\h&amp;m_sivukatuoikea.jpg</init_from>
+			<init_from>../res/textures/h&amp;m_sivukatuoikea.jpg</init_from>
 		</image>
 		<image id="h_m_hk_jpg-img" name="h_m_hk_jpg-img">
-			<init_from>..\res\textures\h&amp;m_hk.jpg</init_from>
+			<init_from>../res/textures/h&amp;m_hk.jpg</init_from>
 		</image>
 		<image id="h_m1_2_jpg-img" name="h_m1_2_jpg-img">
-			<init_from>..\res\textures\h&amp;m1_2.jpg</init_from>
+			<init_from>../res/textures/h&amp;m1_2.jpg</init_from>
 		</image>
 		<image id="h_m_j_jpg-img" name="h_m_j_jpg-img">
-			<init_from>..\res\textures\h&amp;m_j.jpg</init_from>
+			<init_from>../res/textures/h&amp;m_j.jpg</init_from>
 		</image>
 		<image id="adams_jpg-img" name="adams_jpg-img">
-			<init_from>..\res\textures\adams.jpg</init_from>
+			<init_from>../res/textures/adams.jpg</init_from>
 		</image>
 		<image id="nitej_jpg-img" name="nitej_jpg-img">
-			<init_from>..\res\textures\nitej.jpg</init_from>
+			<init_from>../res/textures/nitej.jpg</init_from>
 		</image>
 		<image id="nite1_jpg-img" name="nite1_jpg-img">
-			<init_from>..\res\textures\nite1.jpg</init_from>
+			<init_from>../res/textures/nite1.jpg</init_from>
 		</image>
 		<image id="nite_jpg-img" name="nite_jpg-img">
-			<init_from>..\res\textures\nite.jpg</init_from>
+			<init_from>../res/textures/nite.jpg</init_from>
 		</image>
 		<image id="carrolsj_jpg-img" name="carrolsj_jpg-img">
-			<init_from>..\res\textures\carrolsj.jpg</init_from>
+			<init_from>../res/textures/carrolsj.jpg</init_from>
 		</image>
 		<image id="carrols1_jpg-img" name="carrols1_jpg-img">
-			<init_from>..\res\textures\carrols1.jpg</init_from>
+			<init_from>../res/textures/carrols1.jpg</init_from>
 		</image>
 		<image id="carrols_jpg-img" name="carrols_jpg-img">
-			<init_from>..\res\textures\carrols.jpg</init_from>
+			<init_from>../res/textures/carrols.jpg</init_from>
 		</image>
 		<image id="kelapala_jpg-img" name="kelapala_jpg-img">
-			<init_from>..\res\textures\kelapala.jpg</init_from>
+			<init_from>../res/textures/kelapala.jpg</init_from>
 		</image>
 		<image id="kelap_jpg-img" name="kelap_jpg-img">
-			<init_from>..\res\textures\kelap.jpg</init_from>
+			<init_from>../res/textures/kelap.jpg</init_from>
 		</image>
 		<image id="kelaj_jpg-img" name="kelaj_jpg-img">
-			<init_from>..\res\textures\kelaj.jpg</init_from>
+			<init_from>../res/textures/kelaj.jpg</init_from>
 		</image>
 		<image id="kelae_jpg-img" name="kelae_jpg-img">
-			<init_from>..\res\textures\kelae.jpg</init_from>
+			<init_from>../res/textures/kelae.jpg</init_from>
 		</image>
 		<image id="pesula_jpg-img" name="pesula_jpg-img">
-			<init_from>..\res\textures\pesula.jpg</init_from>
+			<init_from>../res/textures/pesula.jpg</init_from>
 		</image>
 		<image id="v_pala_jpg-img" name="v_pala_jpg-img">
-			<init_from>..\res\textures\v_pala.jpg</init_from>
+			<init_from>../res/textures/v_pala.jpg</init_from>
 		</image>
 		<image id="v_2_jpg-img" name="v_2_jpg-img">
-			<init_from>..\res\textures\v_2.jpg</init_from>
+			<init_from>../res/textures/v_2.jpg</init_from>
 		</image>
 		<image id="v_koppi_jpg-img" name="v_koppi_jpg-img">
-			<init_from>..\res\textures\v_koppi.jpg</init_from>
+			<init_from>../res/textures/v_koppi.jpg</init_from>
 		</image>
 		<image id="v_1_jpg-img" name="v_1_jpg-img">
-			<init_from>..\res\textures\v_1.jpg</init_from>
+			<init_from>../res/textures/v_1.jpg</init_from>
 		</image>
 		<image id="morko_jpg-img" name="morko_jpg-img">
-			<init_from>..\res\textures\morko.jpg</init_from>
+			<init_from>../res/textures/morko.jpg</init_from>
 		</image>
 		<image id="morko2_jpg-img" name="morko2_jpg-img">
-			<init_from>..\res\textures\morko2.jpg</init_from>
+			<init_from>../res/textures/morko2.jpg</init_from>
 		</image>
 		<image id="morko1_jpg-img" name="morko1_jpg-img">
-			<init_from>..\res\textures\morko1.jpg</init_from>
+			<init_from>../res/textures/morko1.jpg</init_from>
 		</image>
 		<image id="alexp_jpg-img" name="alexp_jpg-img">
-			<init_from>..\res\textures\alexp.jpg</init_from>
+			<init_from>../res/textures/alexp.jpg</init_from>
 		</image>
 		<image id="aapee_jpg-img" name="aapee_jpg-img">
-			<init_from>..\res\textures\aapee.jpg</init_from>
+			<init_from>../res/textures/aapee.jpg</init_from>
 		</image>
 		<image id="alex3_jpg-img" name="alex3_jpg-img">
-			<init_from>..\res\textures\alex3.jpg</init_from>
+			<init_from>../res/textures/alex3.jpg</init_from>
 		</image>
 		<image id="apala_jpg-img" name="apala_jpg-img">
-			<init_from>..\res\textures\apala.jpg</init_from>
+			<init_from>../res/textures/apala.jpg</init_from>
 		</image>
 		<image id="apala_jpg-img" name="apala_jpg-img">
-			<init_from>..\res\textures\apala.jpg</init_from>
+			<init_from>../res/textures/apala.jpg</init_from>
 		</image>
 		<image id="alex2_jpg-img" name="alex2_jpg-img">
-			<init_from>..\res\textures\alex2.jpg</init_from>
+			<init_from>../res/textures/alex2.jpg</init_from>
 		</image>
 		<image id="alexp_jpg-img" name="alexp_jpg-img">
-			<init_from>..\res\textures\alexp.jpg</init_from>
+			<init_from>../res/textures/alexp.jpg</init_from>
 		</image>
 		<image id="alex1_jpg-img" name="alex1_jpg-img">
-			<init_from>..\res\textures\alex1.jpg</init_from>
+			<init_from>../res/textures/alex1.jpg</init_from>
 		</image>
 		<image id="oja3_jpg-img" name="oja3_jpg-img">
-			<init_from>..\res\textures\oja3.jpg</init_from>
+			<init_from>../res/textures/oja3.jpg</init_from>
 		</image>
 		<image id="oja2_jpg-img" name="oja2_jpg-img">
-			<init_from>..\res\textures\oja2.jpg</init_from>
+			<init_from>../res/textures/oja2.jpg</init_from>
 		</image>
 		<image id="kahvi_jpg-img" name="kahvi_jpg-img">
-			<init_from>..\res\textures\kahvi.jpg</init_from>
+			<init_from>../res/textures/kahvi.jpg</init_from>
 		</image>
 		<image id="oja1_jpg-img" name="oja1_jpg-img">
-			<init_from>..\res\textures\oja1.jpg</init_from>
+			<init_from>../res/textures/oja1.jpg</init_from>
 		</image>
 		<image id="ota7_jpg-img" name="ota7_jpg-img">
-			<init_from>..\res\textures\ota7.jpg</init_from>
+			<init_from>../res/textures/ota7.jpg</init_from>
 		</image>
 		<image id="ota_t_jpg-img" name="ota_t_jpg-img">
-			<init_from>..\res\textures\ota_t.jpg</init_from>
+			<init_from>../res/textures/ota_t.jpg</init_from>
 		</image>
 		<image id="ota1_jpg-img" name="ota1_jpg-img">
-			<init_from>..\res\textures\ota1.jpg</init_from>
+			<init_from>../res/textures/ota1.jpg</init_from>
 		</image>
 		<image id="kpist1_jpg-img" name="kpist1_jpg-img">
-			<init_from>..\res\textures\kpist1.jpg</init_from>
+			<init_from>../res/textures/kpist1.jpg</init_from>
 		</image>
 		<image id="kpist4_jpg-img" name="kpist4_jpg-img">
-			<init_from>..\res\textures\kpist4.jpg</init_from>
+			<init_from>../res/textures/kpist4.jpg</init_from>
 		</image>
 		<image id="kpist3_jpg-img" name="kpist3_jpg-img">
-			<init_from>..\res\textures\kpist3.jpg</init_from>
+			<init_from>../res/textures/kpist3.jpg</init_from>
 		</image>
 		<image id="kpist2_jpg-img" name="kpist2_jpg-img">
-			<init_from>..\res\textures\kpist2.jpg</init_from>
+			<init_from>../res/textures/kpist2.jpg</init_from>
 		</image>
 		<image id="tam4_jpg-img" name="tam4_jpg-img">
-			<init_from>..\res\textures\tam4.jpg</init_from>
+			<init_from>../res/textures/tam4.jpg</init_from>
 		</image>
 		<image id="tam_t_jpg-img" name="tam_t_jpg-img">
-			<init_from>..\res\textures\tam_t.jpg</init_from>
+			<init_from>../res/textures/tam_t.jpg</init_from>
 		</image>
 		<image id="tam3_jpg-img" name="tam3_jpg-img">
-			<init_from>..\res\textures\tam3.jpg</init_from>
+			<init_from>../res/textures/tam3.jpg</init_from>
 		</image>
 		<image id="tam2_jpg-img" name="tam2_jpg-img">
-			<init_from>..\res\textures\tam2.jpg</init_from>
+			<init_from>../res/textures/tam2.jpg</init_from>
 		</image>
 		<image id="tam1_jpg-img" name="tam1_jpg-img">
-			<init_from>..\res\textures\tam1.jpg</init_from>
+			<init_from>../res/textures/tam1.jpg</init_from>
 		</image>
 		<image id="s_4_jpg-img" name="s_4_jpg-img">
-			<init_from>..\res\textures\s_4.jpg</init_from>
+			<init_from>../res/textures/s_4.jpg</init_from>
 		</image>
 		<image id="s_3_jpg-img" name="s_3_jpg-img">
-			<init_from>..\res\textures\s_3.jpg</init_from>
+			<init_from>../res/textures/s_3.jpg</init_from>
 		</image>
 		<image id="s_2_jpg-img" name="s_2_jpg-img">
-			<init_from>..\res\textures\s_2.jpg</init_from>
+			<init_from>../res/textures/s_2.jpg</init_from>
 		</image>
 		<image id="s_1_jpg-img" name="s_1_jpg-img">
-			<init_from>..\res\textures\s_1.jpg</init_from>
+			<init_from>../res/textures/s_1.jpg</init_from>
 		</image>
 		<image id="pow_p_jpg-img" name="pow_p_jpg-img">
-			<init_from>..\res\textures\pow_p.jpg</init_from>
+			<init_from>../res/textures/pow_p.jpg</init_from>
 		</image>
 		<image id="pow_3_jpg-img" name="pow_3_jpg-img">
-			<init_from>..\res\textures\pow_3.jpg</init_from>
+			<init_from>../res/textures/pow_3.jpg</init_from>
 		</image>
 		<image id="pow_1_jpg-img" name="pow_1_jpg-img">
-			<init_from>..\res\textures\pow_1.jpg</init_from>
+			<init_from>../res/textures/pow_1.jpg</init_from>
 		</image>
 		<image id="pow_p_jpg-img" name="pow_p_jpg-img">
-			<init_from>..\res\textures\pow_p.jpg</init_from>
+			<init_from>../res/textures/pow_p.jpg</init_from>
 		</image>
 		<image id="jalus_jpg-img" name="jalus_jpg-img">
-			<init_from>..\res\textures\jalus.jpg</init_from>
+			<init_from>../res/textures/jalus.jpg</init_from>
 		</image>
 		<image id="tiili_jpg-img" name="tiili_jpg-img">
-			<init_from>..\res\textures\tiili.jpg</init_from>
+			<init_from>../res/textures/tiili.jpg</init_from>
 		</image>
 		<image id="lukuk_jpg-img" name="lukuk_jpg-img">
-			<init_from>..\res\textures\lukuk.jpg</init_from>
+			<init_from>../res/textures/lukuk.jpg</init_from>
 		</image>
 		<image id="lukut_jpg-img" name="lukut_jpg-img">
-			<init_from>..\res\textures\lukut.jpg</init_from>
+			<init_from>../res/textures/lukut.jpg</init_from>
 		</image>
 		<image id="lukul_jpg-img" name="lukul_jpg-img">
-			<init_from>..\res\textures\lukul.jpg</init_from>
+			<init_from>../res/textures/lukul.jpg</init_from>
 		</image>
 		<image id="lukuj_jpg-img" name="lukuj_jpg-img">
-			<init_from>..\res\textures\lukuj.jpg</init_from>
+			<init_from>../res/textures/lukuj.jpg</init_from>
 		</image>
 		<image id="v_p_jpg-img" name="v_p_jpg-img">
-			<init_from>..\res\textures\v_p.jpg</init_from>
+			<init_from>../res/textures/v_p.jpg</init_from>
 		</image>
 		<image id="loiva_jpg-img" name="loiva_jpg-img">
-			<init_from>..\res\textures\loiva.jpg</init_from>
+			<init_from>../res/textures/loiva.jpg</init_from>
 		</image>
 		<image id="oiva_jpg-img" name="oiva_jpg-img">
-			<init_from>..\res\textures\oiva.jpg</init_from>
+			<init_from>../res/textures/oiva.jpg</init_from>
 		</image>
 		<image id="v_torni_jpg-img" name="v_torni_jpg-img">
-			<init_from>..\res\textures\v_torni.jpg</init_from>
+			<init_from>../res/textures/v_torni.jpg</init_from>
 		</image>
 		<image id="aino_jpg-img" name="aino_jpg-img">
-			<init_from>..\res\textures\aino.jpg</init_from>
+			<init_from>../res/textures/aino.jpg</init_from>
 		</image>
 		<image id="simo_jpg-img" name="simo_jpg-img">
-			<init_from>..\res\textures\simo.jpg</init_from>
+			<init_from>../res/textures/simo.jpg</init_from>
 		</image>
 		<image id="v_ovi_jpg-img" name="v_ovi_jpg-img">
-			<init_from>..\res\textures\v_ovi.jpg</init_from>
+			<init_from>../res/textures/v_ovi.jpg</init_from>
 		</image>
 		<image id="v_e_jpg-img" name="v_e_jpg-img">
-			<init_from>..\res\textures\v_e.jpg</init_from>
+			<init_from>../res/textures/v_e.jpg</init_from>
 		</image>
 		<image id="v_julki_jpg-img" name="v_julki_jpg-img">
-			<init_from>..\res\textures\v_julki.jpg</init_from>
+			<init_from>../res/textures/v_julki.jpg</init_from>
 		</image>
 		<image id="kir_e_jpg-img" name="kir_e_jpg-img">
-			<init_from>..\res\textures\kir_e.jpg</init_from>
+			<init_from>../res/textures/kir_e.jpg</init_from>
 		</image>
 		<image id="kirjt_jpg-img" name="kirjt_jpg-img">
-			<init_from>..\res\textures\kirjt.jpg</init_from>
+			<init_from>../res/textures/kirjt.jpg</init_from>
 		</image>
 		<image id="kirj_p_jpg-img" name="kirj_p_jpg-img">
-			<init_from>..\res\textures\kirj_p.jpg</init_from>
+			<init_from>../res/textures/kirj_p.jpg</init_from>
 		</image>
 		<image id="kirj_jpg-img" name="kirj_jpg-img">
-			<init_from>..\res\textures\kirj.jpg</init_from>
+			<init_from>../res/textures/kirj.jpg</init_from>
 		</image>
 	</library_images>
 	<library_materials>

@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 
+#ifdef __WIN32__
 Object3D::Object3D(glTexture* ptexstr, TNode* nodeInfo, map<string,TGeometry> *pgeometries)
 {
     geometries = pgeometries;
@@ -17,6 +18,23 @@ Object3D::Object3D(glTexture* ptexstr, TNode* nodeInfo, map<string,TGeometry> *p
 
     this->getBoundingCube();
 }
+#else
+Object3D::Object3D(LTexture* ptexstr, TNode* nodeInfo, map<string,TGeometry> *pgeometries)
+{
+    geometries = pgeometries;
+    vertexCount =0;
+    indexCount = 0;
+    texCount = 0;
+    normalCount = 0;
+    nodeStr = nodeInfo;
+    textures = ptexstr;
+    getTransform();
+    this->boundingBoxVisible = false;
+    this->risen = false;
+
+    this->getBoundingCube();
+}
+#endif
 
 void Object3D::showBoundingBox(bool show)
 {
@@ -379,7 +397,11 @@ void Object3D::render()
                                     glEnable(GL_TEXTURE_2D);
                                     glEnableClientState(GL_TEXTURE_COORD_ARRAY);
                                     glTexCoordPointer(2,GL_FLOAT,0, &(gT.trianglesStrs[j].textureCoords[0]));
+#ifdef __WIN32__
                                     glBindTexture(GL_TEXTURE_2D, textures[gT.trianglesStrs[j].textureIndex].TextureID);
+#else
+                                    glBindTexture(GL_TEXTURE_2D, textures[gT.trianglesStrs[j].textureIndex].getTextureName());
+#endif
                                     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE ,white);
                         }
                         else

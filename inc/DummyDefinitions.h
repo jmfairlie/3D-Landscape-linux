@@ -5,7 +5,7 @@
 #define INT64 unsigned long long
 #endif
 
-#include <qgl.h>
+//#include <qgl.h>
 
 /*
   * Just to make this whole thing compile!!!
@@ -13,7 +13,7 @@
 
 // Define Interface Data Types / Structures
 //
-typedef enum {
+/*typedef enum {
         txUnknown	= 0,	// images
         txBmp		= 1,
         txJpg		= 2,
@@ -35,7 +35,7 @@ typedef	struct
         GLuint		Type;										// Image Type (GL_RGB, GL_RGBA)
         GLuint		Bpp;										// Image Color Depth In Bits Per Pixel
 } glTexture;
-
+*/
 
 
 #endif // DUMMYDEFINITIONS_H

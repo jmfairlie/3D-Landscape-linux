@@ -16,6 +16,8 @@
 
 #ifdef __WIN32__
 #include <TextureLoader.h>
+#else
+#include <ltexture.h>
 #endif
 
 #include <iostream>
@@ -313,9 +315,15 @@ public: //temporary public
         FilterSelector *filterSelector;
         SearchResSelector *srSelector;
 
-        glTexture* textures;
+#ifdef __WIN32__
+        glTexture *textures;
         glTexture skytexture;
         glTexture *auxTextures;
+#else
+        LTexture *textures;
+        LTexture skytexture;
+        LTexture *auxTextures;
+#endif
         float skyangle;
 
         Matrix4D  rot_matrix, inv_transform, currpos_matrix, proj_matrix;

@@ -8,6 +8,7 @@
 #include <TextureLoader.h>
 #else
 #include <DummyDefinitions.h>
+#include <ltexture.h>
 #endif
 
 #include <iostream>
@@ -18,7 +19,11 @@ class Object3D
 {
    public:
       Object3D();
+#ifdef __WIN32__
       Object3D(glTexture* ptexstr, TNode* nodeInfo, map<string,TGeometry> *pgeometries);   // Constructor.
+#else
+      Object3D(LTexture* ptexstr, TNode* nodeInfo, map<string,TGeometry> *pgeometries);   // Constructor.
+#endif
       ~Object3D();  // Destructor.
 
         void render();
@@ -53,7 +58,11 @@ class Object3D
         GLuint texWidth;
         GLuint texHeight;
         */
+#ifdef __WIN32__
         glTexture *textures;
+#else
+        LTexture *textures;
+#endif
         GLuint vertexCount;                        /*!< Mesh vertex coordinate count */
         GLuint vertexFormat;                       /*!< Mesh vertex format */
         GLfloat **vertices;                         /*!< Mesh vertex table */
