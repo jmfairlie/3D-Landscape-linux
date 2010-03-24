@@ -7,8 +7,11 @@
 #include <cmath>
 #include <QGLWidget>
 #include <QFile>
+
+#ifdef __WIN32__
 #include "ffmpegreader.h"
 #include "ffvideothread.h"
+#endif
 
 #define SAME_CLOCKNESS 1
 #define DIFF_CLOCKNESS 0
@@ -49,15 +52,15 @@ public:
     //QWidget * widgetUnder;
     GLuint imageIndex;
 
+#ifdef __WIN32__
     //whether widget is video player
     bool isVideoWidget;
     bool isVideoStarted;
     void startVideo();
     void stopVideo();
-
     FFVideoThread *ffVideoThread;
-
     FFmpegReader *ffMpegReader;
+#endif
 
 private:
     int check_same_clock_dir(Point3D pt1, Point3D pt2, Point3D pt3, Point3D norm);

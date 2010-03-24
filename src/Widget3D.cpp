@@ -20,11 +20,13 @@ Widget3D::Widget3D(Point3D tl, Point3D bl, Point3D tr, Point3D br)
     this->br = br;
 
     this->isSelected = false;
+#ifdef __WIN32__
     this->isVideoWidget = false;
 
     this->ffMpegReader = NULL;
     this->ffVideoThread = NULL;
     this->isVideoStarted = false;
+#endif
 }
 
 Widget3D::Widget3D(Point3D tl, Point3D bl, Point3D tr, Point3D br, GLuint imageIndex,
@@ -40,12 +42,13 @@ Widget3D::Widget3D(Point3D tl, Point3D bl, Point3D tr, Point3D br, GLuint imageI
     this->imageIndex = imageIndex;
 
     this->widget = widget;
-
+#ifdef __WIN32__
     this->isVideoWidget = isVideoWidget;
 
     this->ffMpegReader = NULL;
     this->ffVideoThread = NULL;
     this->isVideoStarted = false;
+#endif
 }
 
 void Widget3D::changeSelection(bool sel)
@@ -233,12 +236,15 @@ Point3D Widget3D::getLocalCoord()
 
     coord2D.y /= lenSqrTlb;
 
+    coord2D.z = 0.0f;
+
     printf("Widget X: %.2f\n", coord2D.x);
     printf("Widget Y: %.2f\n", coord2D.y);
 
     return coord2D;
 }
 
+#ifdef __WIN32__
 void Widget3D::startVideo()
 {
     //not to start video several times
@@ -285,13 +291,16 @@ void Widget3D::stopVideo()
         }
     }
 }
+#endif
 
 Widget3D::~Widget3D()
 {
+#ifdef __WIN32__
     if(this->ffVideoThread)
         delete this->ffVideoThread;
     if(this->ffMpegReader)
         delete this->ffMpegReader;
+#endif
 }
 
 

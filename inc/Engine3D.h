@@ -13,7 +13,13 @@
 #include <Utils3D.h>
 #include <Object3D.h>
 #include <ColladaReader.h>
+
+#ifdef __WIN32__
 #include <TextureLoader.h>
+#else
+#include <ltexture.h>
+#endif
+
 #include <iostream>
 #include <cstring>
 #include <stdio.h>
@@ -21,8 +27,12 @@
 #include <qtimer.h>
 #include <QKeyEvent>
 #include <QMouseEvent>
+
+#ifdef __WIN32__
 #include <QBtooth.h>
 #include <QBthread.h>
+#endif
+
 #include <QMetaType>
 #include <QWheelEvent>
 #include <QPainter>
@@ -115,7 +125,10 @@ public:
         bool checkCollisions(VECTOR4D p);
 
         void updateWidgetTexture();
+
+#ifdef __WIN32__
         void updateVideoWidgetTexture();
+#endif
 
         void createWidgets3D();
         void destroyWidgets3D();
@@ -157,8 +170,10 @@ protected slots:
         void textureTimerSlot();
 
         //Shake SK7 slots
+#ifdef __WIN32__
         void printAccData(AccData accData);
         void isDisconnected(bool disconnected);
+#endif
 
         void menuItemClicked(QString menuItemName);        
 
@@ -184,8 +199,10 @@ public: //temporary public
         //=true if screenshot is needed
         bool isMakeScreenShot;
 
+#ifdef __WIN32__
         //if video widget is playing
         bool isVideoPlaying;
+#endif
 
         //=true, if the user is in the inside view
         bool inInsideView;
@@ -231,7 +248,10 @@ public: //temporary public
         void destroySceneObjects();
 
         QList<Widget3D*> widgets3D;
+
+#ifdef __WIN32__
         QList<Widget3D*> videoWidgets3D;
+#endif
 
         EAppState applicationState;
 
@@ -240,7 +260,10 @@ public: //temporary public
         void updateRay(int x, int y);
 
         int selectedWidget;
+
+#ifdef __WIN32__
         int selectedVideoWidget;
+#endif
 
         bool getVerticesAndImageIndex(QString nodeID, Point3D &tl, Point3D &bl,
             Point3D &tr, Point3D &br, GLuint &imageIndex);
@@ -292,9 +315,15 @@ public: //temporary public
         FilterSelector *filterSelector;
         SearchResSelector *srSelector;
 
-        glTexture* textures;
+#ifdef __WIN32__
+        glTexture *textures;
         glTexture skytexture;
         glTexture *auxTextures;
+#else
+        LTexture *textures;
+        LTexture skytexture;
+        LTexture *auxTextures;
+#endif
         float skyangle;
 
         Matrix4D  rot_matrix, inv_transform, currpos_matrix, proj_matrix;
@@ -303,7 +332,11 @@ public: //temporary public
 	int numObjects;
 	int numTextures;
         int numAuxTextures;
+
+#ifdef __WIN32__
 	TextureLoader* textureLoader;
+#endif
+
 	ColladaReader * colladaLoader;
         ColladaReader * colladaAuxObjects;
 	TGeomInfo geomInfo;
@@ -344,9 +377,13 @@ public: //temporary public
         float currentPitch;
         GLUquadric* cameraLocator;
         GLUquadric* sky;
+
+#ifdef __WIN32__
         //Shake SK7 connectivity
         QBtooth *bt;
         QBthread *bThr;
+#endif
+
         int pathCounter;
         int pathLength;
 
@@ -356,7 +393,12 @@ public: //temporary public
         VECTOR4D pathDestination;
         VECTOR4D pathLookup;
         unsigned int frames;
+
+#ifdef __WIN32__
         DWORD startTime;
+#else
+        unsigned long startTime;
+#endif
         float fps;
         bool lightsOn;
         int numlights;
