@@ -5,3 +5,5 @@ Makefile*
 project6.pro.user
 object_script.*
 *.o
+bin/project6
+moc_*
